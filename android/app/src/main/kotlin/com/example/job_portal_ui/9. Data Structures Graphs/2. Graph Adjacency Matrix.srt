@@ -1,0 +1,123 @@
+1
+00:00:00,650 --> 00:00:05,660
+So there are two ways we're going to look at being able to represent a graph.
+
+2
+00:00:06,290 --> 00:00:12,440
+The first one is going to be an adjacency matrix, the other one will be an adjacency list.
+
+3
+00:00:13,070 --> 00:00:19,100
+So let's bring up a graph and we're going to represent this in an adjacency matrix.
+
+4
+00:00:19,940 --> 00:00:24,230
+So we'll start by looking at this a vertex.
+
+5
+00:00:24,410 --> 00:00:38,150
+It has two edges with E and B, so we'll say A has edges with B and E, and we'll just put ones in those
+
+6
+00:00:38,150 --> 00:00:39,020
+boxes there.
+
+7
+00:00:39,710 --> 00:00:43,070
+And of course, A cannot have an edge with itself.
+
+8
+00:00:43,070 --> 00:00:47,600
+So we'll put a zero in that one and that it does not have an edge with C and D.
+
+9
+00:00:48,500 --> 00:00:50,030
+So we'll put zeros in there.
+
+10
+00:00:51,100 --> 00:00:57,370
+Now, let's look at B, it has edges with A and C so B.
+
+11
+00:00:58,410 --> 00:01:02,280
+Has edges with ANC and the rest will be zeros.
+
+12
+00:01:03,410 --> 00:01:08,440
+I'll just finish building this out like this to complete our matrix.
+
+13
+00:01:10,870 --> 00:01:20,500
+So this axis represents the actual vertex, this axis is the items it has an edge with.
+
+14
+00:01:21,220 --> 00:01:26,980
+So now one of the things that's interesting about an adjacency matrix we had mentioned that a can't
+
+15
+00:01:27,130 --> 00:01:32,920
+point to a will also be can't point to B and so on.
+
+16
+00:01:33,610 --> 00:01:37,570
+You're always going to have this 45 degree line of zeros.
+
+17
+00:01:38,350 --> 00:01:45,910
+And if you have a bi directional matrix like we have here, you will always have a mirror image on each
+
+18
+00:01:45,910 --> 00:01:49,780
+side of this 45 degree line that looks like that.
+
+19
+00:01:50,700 --> 00:01:56,970
+But this is only if these are bi directional, so let's change one of these two directional and take
+
+20
+00:01:56,970 --> 00:01:57,630
+a look at that.
+
+21
+00:01:58,640 --> 00:02:05,330
+We have a connection between A and B, so in the matrix, that is a connects to B, that's one.
+
+22
+00:02:05,960 --> 00:02:09,600
+B connects back to A that has a one.
+
+23
+00:02:10,460 --> 00:02:17,450
+But if we remove the edge that points from B to A and we changed this to a zero.
+
+24
+00:02:18,470 --> 00:02:22,640
+Now we have lost our symmetry across that 45 degree line.
+
+25
+00:02:23,450 --> 00:02:29,810
+So let's change the edge on the graph back to being bi directional and then we'll change it in the matrix.
+
+26
+00:02:30,140 --> 00:02:32,390
+And now it is symmetrical.
+
+27
+00:02:33,230 --> 00:02:37,700
+So another thing that you can have with your edges is that they can be weighted.
+
+28
+00:02:38,270 --> 00:02:46,160
+So if they're weighted in an adjacency matrix, we will just store these weights in the matrix like
+
+29
+00:02:46,160 --> 00:02:48,080
+this instead of having once.
+
+30
+00:02:49,340 --> 00:02:51,320
+OK, let's put that back.
+
+31
+00:02:52,400 --> 00:02:56,480
+And that is our quick overview of an adjacency matrix.

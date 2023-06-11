@@ -1,0 +1,163 @@
+1
+00:00:00,530 --> 00:00:08,210
+So now let's build our ad edge method, and Ad Edge is just going to take two vertices, which will
+
+2
+00:00:08,210 --> 00:00:10,010
+look like this.
+
+3
+00:00:10,850 --> 00:00:13,280
+And then we add an edge between them.
+
+4
+00:00:13,640 --> 00:00:17,570
+And in the adjacency list that will look like this.
+
+5
+00:00:18,580 --> 00:00:22,780
+So let's bring this down to the bottom and write the code for this.
+
+6
+00:00:23,800 --> 00:00:30,550
+So we'll call this ad edge will pass it, the two vertices that we're creating an edge between and for
+
+7
+00:00:30,550 --> 00:00:35,230
+the next line of code, what I'm going to do is I'm going to break it into two pieces.
+
+8
+00:00:36,160 --> 00:00:39,670
+So we're going to say adjacency list dot get.
+
+9
+00:00:39,940 --> 00:00:42,430
+We're going to pass it vertex one.
+
+10
+00:00:42,970 --> 00:00:46,510
+In this case, that's going to be a down here.
+
+11
+00:00:47,230 --> 00:00:53,650
+And when we run this get method, what is going to return is this ArrayList.
+
+12
+00:00:54,190 --> 00:00:58,150
+So we pass it the key and it returns the value.
+
+13
+00:00:58,150 --> 00:01:04,480
+This is just like we did with the get method and the hash table S. That's doing the same thing here.
+
+14
+00:01:05,230 --> 00:01:11,800
+So since we've returned an ArrayList, we can now use the methods that apply to an array list so we
+
+15
+00:01:11,800 --> 00:01:21,640
+can say Dot Ad, and this dot ad applies to the array list and we'll pass it Vertex two, which is B,
+
+16
+00:01:21,640 --> 00:01:23,590
+which does this.
+
+17
+00:01:24,670 --> 00:01:31,300
+So we'll do this exact same thing again, except switching Vertex two and Vertex one, and then we'll
+
+18
+00:01:31,300 --> 00:01:38,380
+add Vertex one to this array list, and that adds the edge between A and B.
+
+19
+00:01:39,250 --> 00:01:47,140
+So these two lines of code here can only be run if both of the vertices that we're adding the edge between
+
+20
+00:01:47,320 --> 00:01:48,160
+exist.
+
+21
+00:01:48,940 --> 00:01:55,570
+If all the vertices that we have in our graph are a and B like we have here, then obviously we cannot
+
+22
+00:01:55,570 --> 00:01:58,450
+add an edge between A and C.
+
+23
+00:01:59,200 --> 00:02:05,710
+So we're going to wrap these two lines of code with an if statement like this that says if Vertex one
+
+24
+00:02:05,710 --> 00:02:10,060
+and Vertex two both exist, they're not equal to null.
+
+25
+00:02:10,810 --> 00:02:14,410
+Only then do we run these next two lines of code.
+
+26
+00:02:15,250 --> 00:02:21,700
+And if the conditional in this if statement is true and we've added, the edge will also want to return
+
+27
+00:02:21,820 --> 00:02:22,390
+true.
+
+28
+00:02:23,310 --> 00:02:29,670
+If the conditional in the statement is false, we'll skip past that and we'll return false.
+
+29
+00:02:30,750 --> 00:02:34,020
+So that is our entire ad edge method.
+
+30
+00:02:34,560 --> 00:02:38,490
+Now let's flip over to Intel AIG and take a look at this.
+
+31
+00:02:39,430 --> 00:02:46,690
+So there is the add edge method that we just created, and I'll come up here to this tab where we have
+
+32
+00:02:46,690 --> 00:02:48,130
+our main method.
+
+33
+00:02:48,940 --> 00:02:51,670
+And with this line here, we'll create a new graph.
+
+34
+00:02:51,850 --> 00:02:59,530
+And then with these two lines, we'll add those vertices A and B, and then we'll print this out and
+
+35
+00:02:59,530 --> 00:03:00,370
+I'll run this.
+
+36
+00:03:02,110 --> 00:03:07,870
+So you can see up here that we have our two vertices, A and B, but we don't have an edge between them
+
+37
+00:03:08,020 --> 00:03:11,200
+yet, so I'm going to come up here and add a line.
+
+38
+00:03:12,790 --> 00:03:20,380
+And with this line will add an edge between A and B, and that will once again print out the graph with
+
+39
+00:03:20,380 --> 00:03:22,780
+this line here, so I'll run this.
+
+40
+00:03:24,050 --> 00:03:28,640
+And you can see now that we have an edge between A and B.
+
+41
+00:03:29,870 --> 00:03:33,440
+And that is our method for Ad Edge.

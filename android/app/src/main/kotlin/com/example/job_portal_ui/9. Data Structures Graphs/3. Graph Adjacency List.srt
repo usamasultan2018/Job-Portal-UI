@@ -1,0 +1,55 @@
+1
+00:00:00,520 --> 00:00:04,480
+So now let's look at creating an adjacency list.
+
+2
+00:00:05,140 --> 00:00:14,140
+So an adjacency list is just another way of representing a graph, and we'll do this by using a hash
+
+3
+00:00:14,140 --> 00:00:14,560
+map.
+
+4
+00:00:15,340 --> 00:00:21,980
+So let's look at the Vertex A it has edges with B and E.
+
+5
+00:00:22,840 --> 00:00:28,870
+So when the hash map, we would represent this as a key value pair like this.
+
+6
+00:00:29,440 --> 00:00:38,530
+The vertex itself a is the key, and then the value is going to be an array list that has all of the
+
+7
+00:00:38,530 --> 00:00:39,040
+edges.
+
+8
+00:00:39,850 --> 00:00:42,380
+So notice the double quotes are used here.
+
+9
+00:00:42,400 --> 00:00:48,700
+That means there are strings, not chars, so you could put words in here instead of letters.
+
+10
+00:00:49,420 --> 00:00:54,160
+So now let's go around this graph and we'll move over to be.
+
+11
+00:00:54,160 --> 00:01:00,550
+It has edges with A and C C has edges with B and D.
+
+12
+00:01:01,560 --> 00:01:09,130
+D has edges with CNE, and then finally, EA has edges with Andy.
+
+13
+00:01:10,090 --> 00:01:18,250
+So this hash map on the right is just going to be another way of representing this graph on the left.
+
+14
+00:01:19,150 --> 00:01:23,020
+And that is our quick overview of an adjacency list.

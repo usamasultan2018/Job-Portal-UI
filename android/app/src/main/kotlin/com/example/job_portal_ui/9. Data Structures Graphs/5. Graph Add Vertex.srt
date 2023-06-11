@@ -1,0 +1,251 @@
+1
+00:00:00,520 --> 00:00:07,810
+So now we're going to write our ad vertex method, which is going to create one of these in the next
+
+2
+00:00:07,810 --> 00:00:15,130
+video will write our ad edge method and that will allow this vertex to connect to other vertices like
+
+3
+00:00:15,130 --> 00:00:15,730
+this.
+
+4
+00:00:16,630 --> 00:00:22,270
+But for now, in this method, all we're creating is just this.
+
+5
+00:00:23,340 --> 00:00:30,480
+So once we add this first vertex that we're going to give a value of a R adjacency list is going to
+
+6
+00:00:30,480 --> 00:00:31,890
+look like this.
+
+7
+00:00:32,840 --> 00:00:36,410
+So let's move this down to the bottom and start writing our code.
+
+8
+00:00:37,310 --> 00:00:41,180
+So we're going to start this out by saying public class graph.
+
+9
+00:00:41,750 --> 00:00:47,480
+So with previous data structures, we broke the constructor out into a separate video and we started
+
+10
+00:00:47,570 --> 00:00:50,300
+this line of code in the constructor video.
+
+11
+00:00:51,140 --> 00:00:57,650
+But with the class graph, all we're going to do is create one class variable, so it didn't make sense
+
+12
+00:00:57,650 --> 00:01:06,500
+to break that out into its own video and that class variable is just going to create this and empty
+
+13
+00:01:06,620 --> 00:01:11,540
+hash map that is going to be used to store our adjacency list.
+
+14
+00:01:12,530 --> 00:01:19,100
+Once we've created that, we can write the ad vertex method, which will do this part.
+
+15
+00:01:20,020 --> 00:01:22,280
+So let's create that class variable.
+
+16
+00:01:22,300 --> 00:01:29,590
+It's going to look like this when we flip over to intelligence, you'll see I had this all on one line.
+
+17
+00:01:30,190 --> 00:01:36,160
+But Java doesn't care about line breaks or extra spaces is just going to go up to the semicolon so you
+
+18
+00:01:36,160 --> 00:01:38,890
+can break something like this into two lines.
+
+19
+00:01:39,040 --> 00:01:40,720
+If it is too long.
+
+20
+00:01:41,560 --> 00:01:46,860
+So this is of type hash map and that it has a key value pair here.
+
+21
+00:01:46,870 --> 00:01:51,040
+So the key is a string that is the a down here.
+
+22
+00:01:51,760 --> 00:01:56,350
+And then the value is an array list that will hold strings.
+
+23
+00:01:56,380 --> 00:01:58,420
+That's what this is down here.
+
+24
+00:01:59,370 --> 00:02:06,810
+So this code here just creates an empty hash map called adjacency less so once you run this, all you're
+
+25
+00:02:06,810 --> 00:02:07,800
+going to have.
+
+26
+00:02:08,620 --> 00:02:14,500
+Is this so now let's start writing the code to add a vertex.
+
+27
+00:02:14,800 --> 00:02:16,420
+We'll start it out like this.
+
+28
+00:02:17,080 --> 00:02:18,820
+We're going to return a Boolean.
+
+29
+00:02:18,850 --> 00:02:26,140
+I'll show you why here in a moment, but we will pass this a string that we're going to call Vertex.
+
+30
+00:02:27,080 --> 00:02:33,830
+And then we will add that into the adjacency list like this will say adjacency list dot put.
+
+31
+00:02:34,610 --> 00:02:39,030
+And we'll use the vertex that will be the key and the key value pair.
+
+32
+00:02:39,560 --> 00:02:43,340
+And then the value is going to be this empty array list.
+
+33
+00:02:44,060 --> 00:02:51,200
+And because you're creating a new array list, you do have to use that key word new and that will add
+
+34
+00:02:51,200 --> 00:02:53,630
+this into our adjacency list.
+
+35
+00:02:54,930 --> 00:03:00,360
+So one of the things about a hash map, though, is that we cannot have duplicates.
+
+36
+00:03:01,380 --> 00:03:08,070
+So we'll need to have some code to make sure this value a that we're using for our vertex isn't already
+
+37
+00:03:08,220 --> 00:03:09,300
+in our hash map.
+
+38
+00:03:10,110 --> 00:03:16,710
+So I'm going to remove this and then I'm going to wrap this last line of code that we just wrote in
+
+39
+00:03:16,710 --> 00:03:17,820
+this if statement.
+
+40
+00:03:18,660 --> 00:03:25,710
+So we'll see if adjacency list dot get and we'll pass at the vertex if that's equal to null.
+
+41
+00:03:26,370 --> 00:03:31,140
+What that means is that Vertex is not already in the graph.
+
+42
+00:03:32,040 --> 00:03:38,130
+Only then do we want to run that next line where we put that new vertex into the graph.
+
+43
+00:03:39,120 --> 00:03:46,740
+And then will want to add a line here where we say return true now, if the conditional in this if statement
+
+44
+00:03:46,740 --> 00:03:52,920
+equates to false, we're going to skip the statement and come down to here and return false.
+
+45
+00:03:53,880 --> 00:03:57,210
+And that is all of the code for Ad Vertex method.
+
+46
+00:03:58,020 --> 00:04:02,130
+So now let's flip over to Intel AIG and take a look at this.
+
+47
+00:04:03,600 --> 00:04:08,910
+So to begin with, will come up here, we have a new package that we call Graaff, the package name
+
+48
+00:04:08,910 --> 00:04:10,110
+is lowercase.
+
+49
+00:04:10,680 --> 00:04:13,290
+And that's going to contain two classes.
+
+50
+00:04:13,650 --> 00:04:16,660
+First will be graph with an uppercase G.
+
+51
+00:04:16,680 --> 00:04:22,290
+That's what you see in the window to the right there, and it will have our main class that contains
+
+52
+00:04:22,290 --> 00:04:23,940
+our main method.
+
+53
+00:04:24,330 --> 00:04:27,210
+So I'm going to come up here and close this side window.
+
+54
+00:04:28,690 --> 00:04:32,920
+So here is our graph class that we've just created.
+
+55
+00:04:33,730 --> 00:04:37,870
+I have added one method here and that is print graph.
+
+56
+00:04:38,440 --> 00:04:42,100
+And this is our ad vertex method down here.
+
+57
+00:04:43,140 --> 00:04:49,710
+So now I'm going to come up here to move to our main class that contains our main method.
+
+58
+00:04:50,460 --> 00:04:58,110
+And with this line, we're creating a new graph called my graph and then we're saying my graph dot +
+
+59
+00:04:58,110 --> 00:05:01,130
+vertex and we're passing that letter A..
+
+60
+00:05:01,830 --> 00:05:04,530
+And then with this line here, we will print that out.
+
+61
+00:05:05,640 --> 00:05:06,690
+So I'll run this.
+
+62
+00:05:08,440 --> 00:05:12,100
+And there is our graph with our Vertex A.
+
+63
+00:05:13,440 --> 00:05:17,700
+And that is our method for AD Vertex.

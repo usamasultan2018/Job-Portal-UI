@@ -1,0 +1,319 @@
+1
+00:00:00,540 --> 00:00:04,080
+So now we're going to look at the big O of graphs.
+
+2
+00:00:04,680 --> 00:00:07,840
+I'm going to bring up the graph that we've been using.
+
+3
+00:00:08,460 --> 00:00:16,980
+And we've looked at two ways of representing this graph and adjacency matrix and an adjacency list,
+
+4
+00:00:16,980 --> 00:00:19,830
+and we're going to look at the big O of both.
+
+5
+00:00:20,730 --> 00:00:23,070
+So first, we'll look at space complexity.
+
+6
+00:00:23,280 --> 00:00:30,960
+So if we have a vertex like a with an adjacency list, we're going to store that vertex and then we're
+
+7
+00:00:30,960 --> 00:00:36,300
+going to store each one of the edges in an adjacency matrix.
+
+8
+00:00:36,300 --> 00:00:38,010
+We store those edges.
+
+9
+00:00:38,340 --> 00:00:44,400
+But we also have to store everything that it is not connected to all of these zeros.
+
+10
+00:00:45,120 --> 00:00:48,780
+And that is a big advantage of the adjacency list.
+
+11
+00:00:49,590 --> 00:00:58,890
+So for space complexity, the adjacency matrix is o of the number of vertices squared in the adjacency
+
+12
+00:00:58,890 --> 00:01:03,030
+list is the number of vertices, plus the number of edges.
+
+13
+00:01:03,990 --> 00:01:09,030
+So from a space complexity perspective, the adjacency list is better.
+
+14
+00:01:09,840 --> 00:01:15,370
+So let's bring back our graph, and let's say we're going to add a vertex.
+
+15
+00:01:15,390 --> 00:01:17,610
+We're not adding an edge yet.
+
+16
+00:01:17,640 --> 00:01:18,960
+We'll look at that in a moment.
+
+17
+00:01:19,020 --> 00:01:24,960
+We're just adding a vertex, and it is not connected to anything with an edge yet.
+
+18
+00:01:25,740 --> 00:01:30,360
+So let's bring these back up and we'll look at the adjacency list first.
+
+19
+00:01:30,600 --> 00:01:37,080
+Adding a vertex is just a matter of doing this with the adjacency matrix.
+
+20
+00:01:37,200 --> 00:01:39,660
+We have to do this.
+
+21
+00:01:40,530 --> 00:01:44,970
+So the adjacency matrix is going to be stored in a two dimensional array.
+
+22
+00:01:44,970 --> 00:01:52,860
+As soon as you make those arrays bigger, you have to create new arrays that are bigger, and recreating
+
+23
+00:01:52,860 --> 00:01:55,710
+those arrays is very inefficient.
+
+24
+00:01:56,040 --> 00:02:03,570
+So from a big ole perspective, the adjacency matrix is the number of vertices squared every time you
+
+25
+00:02:03,570 --> 00:02:10,380
+add a vertex, whereas with an adjacency list, it's a of one to add a vertex.
+
+26
+00:02:11,040 --> 00:02:15,540
+So the adjacency list is much more efficient at doing this.
+
+27
+00:02:16,200 --> 00:02:25,770
+So let's bring our graph back, and we're going to add an edge between B and our new Vertex F like this.
+
+28
+00:02:26,670 --> 00:02:30,480
+And let's bring these back up and look at the adjacency list.
+
+29
+00:02:30,480 --> 00:02:37,140
+First, in order to do this will add an edge that goes from B to F like this.
+
+30
+00:02:37,680 --> 00:02:44,300
+And then one that goes from F to be like this with the adjacency matrix.
+
+31
+00:02:44,310 --> 00:02:47,760
+We just go in and change this from a zero to a one.
+
+32
+00:02:47,770 --> 00:02:49,530
+And then we do the same thing here.
+
+33
+00:02:49,530 --> 00:02:53,280
+And that adds that edge between FNB.
+
+34
+00:02:54,000 --> 00:03:01,330
+So both the adjacency matrix and the adjacency list are zero of one to add an edge.
+
+35
+00:03:02,100 --> 00:03:08,130
+So let's bring back our graph and look at what it would take to remove this edge.
+
+36
+00:03:08,880 --> 00:03:16,380
+We'll bring these back up and start with the adjacency list in order to remove the edge between B and
+
+37
+00:03:16,380 --> 00:03:16,890
+F..
+
+38
+00:03:17,250 --> 00:03:22,590
+We're going to go find B and finding a key and a hash map is O of one.
+
+39
+00:03:23,250 --> 00:03:30,810
+But once we find B, we have to iterate through that entire array list and find F and then remove it.
+
+40
+00:03:31,500 --> 00:03:34,650
+Then we'll come down to F and do the same thing here.
+
+41
+00:03:34,680 --> 00:03:36,780
+Go through this array list.
+
+42
+00:03:37,830 --> 00:03:39,030
+And remove be.
+
+43
+00:03:39,930 --> 00:03:44,940
+With an adjacency matrix, we just come here and change the one to a zero.
+
+44
+00:03:45,030 --> 00:03:47,100
+Change this one to a zero.
+
+45
+00:03:47,670 --> 00:03:49,650
+And that edge is removed.
+
+46
+00:03:50,310 --> 00:03:56,850
+So this is a situation where the adjacency matrix outperforms the adjacency list.
+
+47
+00:03:57,480 --> 00:03:59,760
+The adjacency matrix is of one.
+
+48
+00:04:00,270 --> 00:04:06,000
+But the adjacency list you have to go through, all of the edges in a particular vertex might have a
+
+49
+00:04:06,000 --> 00:04:12,450
+thousand edges, and you'd have to go through the entire array list to remove the edge.
+
+50
+00:04:13,460 --> 00:04:20,120
+So now let's bring back our graph and we will remove a vertex like that.
+
+51
+00:04:20,870 --> 00:04:25,550
+So let's bring this back up and we'll start with the adjacency list.
+
+52
+00:04:26,240 --> 00:04:31,100
+So when you're looking at this, this looks pretty simple that you would just remove this.
+
+53
+00:04:31,790 --> 00:04:38,090
+But we're also going to have to come here and go through this entire array list here and see if there
+
+54
+00:04:38,090 --> 00:04:39,140
+are any f's.
+
+55
+00:04:39,770 --> 00:04:46,460
+Then we're going to come down here and do the same thing with this array list and so wand through the
+
+56
+00:04:46,460 --> 00:04:48,320
+entire adjacency list.
+
+57
+00:04:49,040 --> 00:04:53,630
+So you're going to have to touch every vertex and every edge.
+
+58
+00:04:54,380 --> 00:05:01,070
+There is a way to do this more efficiently if you have bi directional edges, and we'll go over that
+
+59
+00:05:01,340 --> 00:05:09,560
+when we do our method for remove vertex because we're going to create our graph with bi directional
+
+60
+00:05:09,800 --> 00:05:10,370
+edges.
+
+61
+00:05:11,150 --> 00:05:14,600
+So now let's look at this with an adjacency matrix.
+
+62
+00:05:15,410 --> 00:05:22,220
+In order to remove that f vertex, we have to do this and rewrite the arrays.
+
+63
+00:05:22,580 --> 00:05:29,090
+So this is also very inefficient when we remove a vertex from an adjacency matrix.
+
+64
+00:05:29,750 --> 00:05:36,800
+So the big o of the adjacency matrix is going to be o of the number of vertices squared.
+
+65
+00:05:37,670 --> 00:05:46,100
+The adjacency list is O of V plus e and other words, you have to touch every vertex and every edge.
+
+66
+00:05:46,910 --> 00:05:53,960
+So in this course, we're just going to create an adjacency list, and I want to talk a little bit more
+
+67
+00:05:53,960 --> 00:05:59,030
+about why an adjacency list is typically better than an adjacency matrix.
+
+68
+00:05:59,720 --> 00:06:04,670
+So we talked about with an adjacency matrix that we're not just storing.
+
+69
+00:06:04,670 --> 00:06:06,350
+The connections are the ones.
+
+70
+00:06:06,350 --> 00:06:09,050
+We also have to store all of the zeros.
+
+71
+00:06:09,050 --> 00:06:17,990
+All of the things that were not connected to this becomes incredibly inefficient when you have a very
+
+72
+00:06:17,990 --> 00:06:19,280
+large graph.
+
+73
+00:06:19,280 --> 00:06:21,410
+So say you have something like Facebook.
+
+74
+00:06:22,070 --> 00:06:27,440
+And we'll say for easy figuring that Facebook has a billion active users.
+
+75
+00:06:28,220 --> 00:06:33,590
+While you would have a graph that has instead of five like we're showing here, there would be a billion
+
+76
+00:06:33,590 --> 00:06:39,410
+items across the top and a billion items down the left side of this graph.
+
+77
+00:06:40,070 --> 00:06:48,920
+Even if each of the billion users had a thousand friends, you would have literally a million zeros
+
+78
+00:06:49,070 --> 00:06:52,400
+in that graph for every one.
+
+79
+00:06:53,300 --> 00:06:55,910
+So that would be incredibly inefficient.
+
+80
+00:06:56,630 --> 00:07:07,240
+So that is why in this course, we are going to use an adjacency list and that is graph big O.

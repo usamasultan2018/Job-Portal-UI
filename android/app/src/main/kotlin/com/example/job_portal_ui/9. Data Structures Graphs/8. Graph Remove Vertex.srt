@@ -1,0 +1,307 @@
+1
+00:00:00,550 --> 00:00:04,750
+So now we're going to create our Remove Vertex method.
+
+2
+00:00:05,530 --> 00:00:11,710
+I'm going to bring up a graph like this, and let's say we're going to remove the D vertex if we're
+
+3
+00:00:11,710 --> 00:00:12,880
+going to remove that.
+
+4
+00:00:13,090 --> 00:00:19,330
+We also need to remove all of the edges with D like this.
+
+5
+00:00:20,020 --> 00:00:28,210
+And then we can remove the Vertex seven to bring D back like this and put everything back the way it
+
+6
+00:00:28,240 --> 00:00:29,080
+was.
+
+7
+00:00:29,920 --> 00:00:37,270
+So this graph would be represented by this adjacency list, and I'll just keep that on the screen since
+
+8
+00:00:37,270 --> 00:00:39,280
+that's what we're actually working with.
+
+9
+00:00:40,340 --> 00:00:47,120
+In the big old video, I talked about an efficiency that we could use when removing a vertex when all
+
+10
+00:00:47,120 --> 00:00:49,340
+of our edges are bi directional.
+
+11
+00:00:50,260 --> 00:00:56,170
+And we're able to use that efficiency because of what is stored in this adjacency list.
+
+12
+00:00:57,280 --> 00:01:07,750
+If De has edges with A, B and C, we know if they're bi directional edges that A, B and C also have
+
+13
+00:01:07,750 --> 00:01:09,670
+edges with D.
+
+14
+00:01:10,690 --> 00:01:18,730
+So even if we had a graph that had a thousand vertices on it, we know that only these three have edges
+
+15
+00:01:18,970 --> 00:01:21,280
+that connect back to D.
+
+16
+00:01:22,350 --> 00:01:30,930
+So what we can do is loop through this array list, and we know that a in its array list must have an
+
+17
+00:01:30,930 --> 00:01:38,740
+edge back to D and then we can remove that and we can keep looping through that array list at the bottom.
+
+18
+00:01:38,820 --> 00:01:46,200
+And we know that B must have an edge back to D, and we know that C must have an edge back to D.
+
+19
+00:01:47,350 --> 00:01:53,170
+And like I said, if we had a thousand vertices, we don't have to visit any of those other vertices
+
+20
+00:01:53,500 --> 00:01:58,270
+to remove the edge back to D. We only have to visit these three.
+
+21
+00:01:59,470 --> 00:02:07,120
+Now that we've removed all of the edges going back to RD, we can come down here and remove the vertex.
+
+22
+00:02:08,020 --> 00:02:11,800
+And that leaves us with a graph that looks like this.
+
+23
+00:02:12,960 --> 00:02:17,100
+So now that we've walked through that, let's start writing the code.
+
+24
+00:02:18,990 --> 00:02:25,110
+We'll call this remove Vertex, and then we're just going to pass this the vertex that we want to remove.
+
+25
+00:02:26,160 --> 00:02:33,900
+So the first thing we'll do is this will say, if adjacency list get well past us, the vertex, if
+
+26
+00:02:33,900 --> 00:02:38,250
+it's null, that means that the vertex is not in the graph.
+
+27
+00:02:39,120 --> 00:02:42,000
+If that's the case, we're just going to return false.
+
+28
+00:02:42,930 --> 00:02:48,780
+Otherwise, we know the vertex is on the graph and the first thing we want to do is create a for loop
+
+29
+00:02:49,020 --> 00:02:50,850
+to loop through that array list.
+
+30
+00:02:51,960 --> 00:02:56,130
+So we'll do that like this, and we'll walk through all of this here in a second.
+
+31
+00:02:56,670 --> 00:03:03,540
+But we're going to pass this the vertex adjacency list, yet we're going to pass that to Vertex.
+
+32
+00:03:04,440 --> 00:03:09,180
+So I'm going to focus and just on this line of code and bring this up.
+
+33
+00:03:09,870 --> 00:03:18,600
+So remember when we do adjacency list dot get pass at the vertex, that vertex is D and what it returns
+
+34
+00:03:19,050 --> 00:03:20,820
+is this ArrayList.
+
+35
+00:03:21,660 --> 00:03:25,020
+So this is what we're looping through in this for loop.
+
+36
+00:03:25,980 --> 00:03:30,990
+So when I call this variable here, other vertex, because this is the other vertex that we need to
+
+37
+00:03:30,990 --> 00:03:35,220
+go to to remove the edge that goes back to DX.
+
+38
+00:03:36,150 --> 00:03:39,180
+Some of bringing back the rest of our code like this.
+
+39
+00:03:40,410 --> 00:03:45,630
+So I'm going to break this next line down into two steps, we're going to say adjacency list Typekit.
+
+40
+00:03:46,590 --> 00:03:47,610
+Other Vertex.
+
+41
+00:03:48,300 --> 00:03:55,140
+And remember, that's going to return an array list so we can use the methods associated with a release
+
+42
+00:03:55,140 --> 00:04:01,210
+and we can say dot remove the vertex that we want to remove from that array less.
+
+43
+00:04:01,210 --> 00:04:04,050
+So now let's look at just this line of code.
+
+44
+00:04:04,770 --> 00:04:08,270
+Remember that this line is inside of the four loops.
+
+45
+00:04:08,280 --> 00:04:12,540
+I'm going to do this and walk through what this does.
+
+46
+00:04:13,550 --> 00:04:20,960
+So the first time through the for loop other Vertex is going to be that a variable that I have highlighted
+
+47
+00:04:20,960 --> 00:04:23,030
+in the vertex at the bottom there.
+
+48
+00:04:23,840 --> 00:04:33,170
+So the adjacency lists dot jet is going to give us this vertex, the dot removed vertex is going to
+
+49
+00:04:33,170 --> 00:04:35,000
+remove D.
+
+50
+00:04:36,130 --> 00:04:39,310
+And then we move through the for loop and do that here.
+
+51
+00:04:40,150 --> 00:04:46,330
+Now other vertex is going to be B and then we remove D and then we do it again.
+
+52
+00:04:46,330 --> 00:04:52,300
+Here other vertex will be C here and then we remove that.
+
+53
+00:04:53,390 --> 00:04:56,250
+So let's bring back the rest of our code like this.
+
+54
+00:04:56,270 --> 00:04:59,270
+Now we've removed all of those edges that go back to.
+
+55
+00:05:00,230 --> 00:05:03,350
+Now we can actually remove the Vertex DX.
+
+56
+00:05:04,070 --> 00:05:07,610
+Like this so adjacency list dot remove.
+
+57
+00:05:07,790 --> 00:05:13,400
+We pass at this vertex and that is going to do this.
+
+58
+00:05:14,390 --> 00:05:17,390
+Which gives us a graph that looks like this.
+
+59
+00:05:18,320 --> 00:05:24,800
+Now there's one thing left to add to our code, and that is to return true because we are returning
+
+60
+00:05:25,100 --> 00:05:25,730
+a Boolean.
+
+61
+00:05:26,690 --> 00:05:28,910
+So that's the entire method there.
+
+62
+00:05:28,940 --> 00:05:36,770
+We'll look at this method in a moment and intelligence, and when we do, we'll create this graph and
+
+63
+00:05:36,770 --> 00:05:42,590
+then we'll run the remove vertex method to remove the D vertex like that.
+
+64
+00:05:43,570 --> 00:05:48,220
+And that will leave us with an adjacency list that looks like this.
+
+65
+00:05:49,230 --> 00:05:52,650
+So now let's flip over to Intel AJ and take a look at this.
+
+66
+00:05:54,210 --> 00:06:01,680
+So there is our remove vertex method there that we just created, that I'll come up here to our main
+
+67
+00:06:01,680 --> 00:06:08,550
+class that contains our main method, and then with this line here we create a new graph called my graph.
+
+68
+00:06:09,270 --> 00:06:13,860
+With these four lines, here we create the four vertices A, B, C and D.
+
+69
+00:06:14,580 --> 00:06:18,990
+And then with these lines here, we'll add all of the edges that we had in the diagram.
+
+70
+00:06:19,320 --> 00:06:22,380
+And with this line here, we'll print this out.
+
+71
+00:06:23,250 --> 00:06:24,300
+So I'll run this.
+
+72
+00:06:25,620 --> 00:06:28,590
+And this prints out our graph up here.
+
+73
+00:06:29,400 --> 00:06:36,570
+So now I'm going to come over here and I'm going to add this line of code, and this will remove that
+
+74
+00:06:36,570 --> 00:06:42,210
+Vertex D and then with this line here, we will print this out.
+
+75
+00:06:42,750 --> 00:06:43,950
+So I'll run this.
+
+76
+00:06:45,200 --> 00:06:50,630
+So you can see that the Vertex Rd and all of the edges to D have been removed.
+
+77
+00:06:51,510 --> 00:06:56,100
+So it looks like we have a working method for remove Vertex.

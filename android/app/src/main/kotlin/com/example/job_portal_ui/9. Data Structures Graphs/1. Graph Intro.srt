@@ -1,0 +1,175 @@
+1
+00:00:00,550 --> 00:00:03,160
+OK, now let's look at graphs.
+
+2
+00:00:03,790 --> 00:00:06,580
+We're going to start out by bringing this up.
+
+3
+00:00:07,060 --> 00:00:14,980
+This is called a vertex or a node the proper way to say it is Vertex, but you'll hear the word node.
+
+4
+00:00:16,050 --> 00:00:24,270
+And we'll bring up another Vertex, the plural would be vertices, then between the vertices, we have
+
+5
+00:00:24,270 --> 00:00:30,440
+what is called an edge or a connection, the proper way to say it is edge.
+
+6
+00:00:30,450 --> 00:00:33,960
+So we have vertices and edges.
+
+7
+00:00:34,560 --> 00:00:36,750
+Let's bring in another vertex like this.
+
+8
+00:00:37,350 --> 00:00:44,070
+So this vertex can have an edge with this vertex or it can have one with this one.
+
+9
+00:00:44,670 --> 00:00:46,800
+We're going to have one with both.
+
+10
+00:00:47,340 --> 00:00:54,180
+There is no limit to how many other vertices that a vertex can connect to.
+
+11
+00:00:54,720 --> 00:00:58,620
+So now that we have a small graph, let's look at a couple of concepts.
+
+12
+00:00:59,280 --> 00:01:03,810
+Let's say you want to go from this vertex to this vertex.
+
+13
+00:01:04,860 --> 00:01:11,730
+Well, when you look at this, you would say that you don't want to go this way because that is two
+
+14
+00:01:11,760 --> 00:01:12,270
+hops.
+
+15
+00:01:13,250 --> 00:01:18,050
+And this one is one you'd want to go the more direct route.
+
+16
+00:01:18,500 --> 00:01:24,380
+But with graphs, one of the things you can have, you're not always going to have, but you can have
+
+17
+00:01:24,800 --> 00:01:26,390
+our weighted edges.
+
+18
+00:01:27,050 --> 00:01:34,400
+So where you would use something like this would be in a Maps app, you're using Google Maps and the
+
+19
+00:01:34,400 --> 00:01:38,480
+road between 76 and 82 has a lot of traffic.
+
+20
+00:01:38,480 --> 00:01:46,650
+So you go this way instead because this has a cost of five and going this way has a cost of 15.
+
+21
+00:01:47,360 --> 00:01:52,250
+Another place you'll see something like this is with network routing protocols.
+
+22
+00:01:52,910 --> 00:01:58,990
+It would be better to have an extra router hop and have two very fast links than to go the way with
+
+23
+00:01:59,000 --> 00:02:00,350
+a very slow link.
+
+24
+00:02:01,100 --> 00:02:04,730
+And like I said, the edges can be weighted or not weighted.
+
+25
+00:02:05,540 --> 00:02:11,960
+So another concept with graphs which explain this with a Facebook connection between you and a friend.
+
+26
+00:02:12,500 --> 00:02:20,390
+So with a typical Facebook account, your friend is friends with you and you are friends with your friend.
+
+27
+00:02:20,420 --> 00:02:23,060
+It is a bi directional relationship.
+
+28
+00:02:23,600 --> 00:02:30,200
+So on a graph where all of the edges are bi directional, you'll often see it like this without arrows.
+
+29
+00:02:30,650 --> 00:02:35,660
+And when you see it like this, it is assumed that it goes both ways.
+
+30
+00:02:36,530 --> 00:02:41,120
+So let's compare this to something like Instagram or Twitter.
+
+31
+00:02:41,480 --> 00:02:43,850
+When you follow a celebrity.
+
+32
+00:02:44,800 --> 00:02:49,300
+You are following the celebrity, they don't follow you back.
+
+33
+00:02:50,140 --> 00:02:51,310
+That is directional.
+
+34
+00:02:52,000 --> 00:02:54,910
+So the edges can be weighted or non weighted.
+
+35
+00:02:55,540 --> 00:02:58,780
+They can be directional or bi directional.
+
+36
+00:02:59,650 --> 00:03:03,700
+Also, we have seen a graph in this course.
+
+37
+00:03:04,950 --> 00:03:05,790
+It was a tree.
+
+38
+00:03:06,300 --> 00:03:13,950
+Trees are a form of grass, but they have the limitation that each node can only point to two other
+
+39
+00:03:13,950 --> 00:03:14,520
+nodes.
+
+40
+00:03:15,030 --> 00:03:21,300
+And when we looked at trees, we had mentioned that we had seen a tree before, which was a linked list.
+
+41
+00:03:22,080 --> 00:03:27,530
+So link lists are a form of a tree, and a tree is a form of a graph.
+
+42
+00:03:27,540 --> 00:03:36,030
+Therefore, a link list is a form of a graph with the limitation that they can only point to one other
+
+43
+00:03:36,030 --> 00:03:36,450
+node.
+
+44
+00:03:37,380 --> 00:03:43,320
+But we typically think of something that looks like this when we think of graphs.
